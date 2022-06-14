@@ -1,0 +1,156 @@
+% Sample LaTeX file for Econometrics Students
+% Notice these are comments. Any line that starts with '%' is a comment.
+% Rick Eichhorn, February 2, 2017; Updated October 21, 21
+
+% The preamble - setting up the document:
+\documentclass[10pt]{article} % typical type of document, others exist too, can change font size to 11 or 12
+
+% Setting the margins
+\usepackage{geometry}
+\geometry{top=1in,bottom=1in,left=1in,right=1in}
+
+% A package for including links that work after PDFing
+\usepackage{hyperref}
+
+% A package for including graphics
+\usepackage[pdftex]{graphicx}
+
+% Packages for handling interesting math symbols and color
+\usepackage{amsmath}
+\usepackage[usenames,dvipsnames]{xcolor}
+
+% Tikz Package
+\usepackage{tikz} % The Tikz package: http://cremeronline.com/LaTeX/minimaltikz.pdf
+
+% Changing to an attractive font 
+\usepackage{cmbright} % Computer Modern Bright
+\usepackage[T1]{fontenc} % Default is European Computer Modern
+
+\definecolor{CoeCrimson}{RGB}{136,0,17} % Making CoeCrimson
+
+% Now we start the document. Remember every \begin{} needs and \end{}
+\begin{document} 
+
+% A nice header
+\color{CoeCrimson}
+\noindent \textbf{Sir John Hicks \\ Intermediate Macroeconomics \\ \today}
+\color{black}
+
+\begin{center}
+\Large{``Mr. Keynes and the ``Classics'': A Suggested Interpretation''}
+\end{center}
+\normalsize 
+
+% Text
+\section{Introduction}
+IT WILL BE ADMITTED by the least charitable reader that the entertainment value of Mr. Keynes' \textit{General Theory of Employment} is considerably enhanced by its satiric aspect. But it is also clear that many readers have been left very bewildered by this Dunciad. Even if they are convinced by Mr. Keynes' arguments and humbly acknowledge themselves to have been``classical economists'' in the past, they find it hard to remember that they believed in their unregenerate days the things Mr. Keynes says they believed. And there are no doubt others who find their historic doubts a stumbling block, which prevents them from getting as much illumination from the positive theory as they might otherwise have got.
+
+% Lists
+\section{Lists}
+\begin{enumerate}
+\item One
+\item Two
+\item Three
+\end{enumerate}
+
+% Equations
+\section{Equations}
+% Ok, so a note about `Math Mode' - Above is text mode, just typing. To include Mathematical Symbols and equations we use different LaTeX code.
+% First, in line math:
+As we know from the Income-Expenditure model, \( Y^{\ast} = \left [ \frac{1}{1-c_1} \right ] \left ( c_0 + \overline{I} + G - c_1 T \right ) \). 
+
+% Or in `display mode':
+As we know from the Income-Expenditure model, \[ Y^{\ast} = \left [ \frac{1}{1-c_1} \right ]^{ \left ( c_0 + \overline{I} + G - c_1 T \right )} \]
+
+% Or in numbered equation mode:
+As we know from the Income-Expenditure model, 
+\begin{equation} 
+Y^{\ast} = \left [ \frac{1}{1-c_1} \right ] \left ( c_0 + \overline{I} + G - c_1 T \right ) 
+\end{equation}
+\newpage
+
+% Images
+\section{Images}
+Here we put in some images
+\subsection{Simple, Unformatted:}
+% Simple
+\includegraphics[width=5in]{FredGraph.png}
+% The image file must be in the same directory as the tex file and no spaces in the file name
+
+\subsection{More Formatting:}
+% Less Simple
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[width=5in]{Ole.png}
+% The image file must be in the same directory as the tex file and no spaces in the file name
+\caption{Stolen from BBC - Football}
+\label{default}
+\end{center}
+\end{figure}
+\newpage
+
+\section{Table}
+% Stargazer Table from RStudio
+% Table created by stargazer v.5.2.2 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu% Date and time: Thu, Oct 21, 2021 - 07:06:52\begin{table}[!htbp] \centering   \caption{Pythagorean Regression} % Provide your own Title here   \label{} \begin{tabular}{@{\extracolsep{5pt}}lc} \\[-1.8ex]\hline \hline \\[-1.8ex]  & \multicolumn{1}{c}{\textit{Dependent variable:}} \\ \cline{2-2} \\[-1.8ex] & lwr \\ \hline \\[-1.8ex]  lrr & 1.851 \\   & (0.028) \\   & t = 66.265 \\   & \\  Constant & $-$0.002 \\   & (0.004) \\   & t = $-$0.508 \\   & \\ \hline \\[-1.8ex] Observations & 600 \\ R$^{2}$ & 0.880 \\ Adjusted R$^{2}$ & 0.880 \\ 
+% Suppressing unwanted stats% Residual Std. Error & 0.103 (df = 598) \\ % F Statistic & 4,391.086$^{***}$ (df = 1; 598) \\ \hline \hline \\[-1.8ex] % \textit{Note:}  & \multicolumn{1}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ \end{tabular} \end{table} 
+
+
+% What if we want to start a new page:
+\newpage
+
+\section{\LaTeX\ Graphs}
+\vspace{1in}
+\begin{center}
+\begin{picture}(300,300)
+	\thicklines
+	\put(0,0){\line(0,1){300}} % Y-axis
+	\put(0,0){\line(1,0){300}} % X-axis
+	\put(-20,300){$P$} % Y-label
+	\put(300,-10){$Q$} % X-label
+	\put(30,250){\line(1,-1){220}} % Demand Function
+	\put(255,25){$D$} % Label
+	\put(30,30){\line(1,1){220}} % Supply Function
+	\put(255,255){$S$} % Label
+	\put(0,140){\line(1,0){140}} % P* Equilibrium
+	\put(-15,138){$P^{\ast}$}
+	\put(140,0){\line(0,1){140}} % Q* Equilibrium
+\put(138,-15){$Q^{\ast}$}
+% Shifting Supply
+	\color{blue}
+	\put(70,30){\line(1,1){220}} % New Supply Function
+	\put(295,255){$S^{\prime}$} % Label
+	\put(55,50){\vector(1,0){30}} % Arrow
+	\put(205,200){\vector(1,0){30}} % Arrow
+	\color{black}
+\end{picture}
+\end{center}
+
+\newpage
+
+\section*{IS/LM in Tikz\footnote{http://cremeronline.com/LaTeX/minimaltikz.pdf}}
+\begin{tikzpicture}
+% \draw [help lines] (0,0) grid (10,10); % I kept this on until I was done
+\draw [<->, rounded corners, thick, blue] (0,10) -- (0,0) -- (10,0); % axes
+\draw [thick, red] (1,9) to [out=-75, in=150] (9,1); % LM
+\draw [thick, red] (1,1) to [out=25, in=-105] (9,9); % IS
+\draw [dashed, red] (0,3.33) -- (5.15,3.33); % for i*
+\draw [dashed, red] (5.15,0) -- (5.15,3.33); % for Y*
+\node [red] at (9.5,9) {$LM$}; % label for LM
+\node [red] at (9.5,1) {$IS$}; % label for IS
+\node [blue] at (-.25,3.33) {$i^{\ast}$}; % i*
+\node [blue] at (5.15,-.25) {$Y^{\ast}$}; % Y*
+\end{tikzpicture}
+\newpage
+
+% Reference page
+\section{References and Recommended Reading}
+\begin{enumerate}
+	\item Anderson, T.W., \textit{The Statistical Analysis of Time Series}, John Wiley \& Sons, Inc., 1971.
+	\item Box, George, and Gwilym Jenkins, \textit{Time Series Analysis: Forecasting and Control}, Holden-Day, 1976.
+	\item Enders, Walter, \textit{Applied Econometric Time Series}, John Wiley \& Sons, 1995.
+	\item Granger, Clive, ``Autobiography'', \textit{Les Prix Nobel}, 2003.
+	\item Gujarati, Damodar and Dawn Porter, \textit{Basic Econometrics, $5^{th}$ Edition}, McGraw-Hill, 2009.
+	\item Hamilton, James, \textit{Time Series Analysis}, Princeton University Press, 1994.
+	\end{enumerate}
+
+\end{document}
