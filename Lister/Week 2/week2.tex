@@ -1,0 +1,227 @@
+\documentclass{beamer}
+\usetheme{Madrid}
+\usepackage{tikz}
+\usepackage{graphicx}
+\usepackage{ragged2e}
+\usepackage[style=verbose]{biblatex}
+\usepackage{filecontents}
+\usepackage[font={tiny,it}]{caption}
+\usepackage{multicol}
+
+\definecolor{Coe}{RGB}{136, 0, 17}
+\definecolor{Gold}{RGB}{211, 144, 47} 
+
+\setbeamercolor{palette primary}{bg=Coe,fg=white}
+\setbeamercolor{palette secondary}{bg=Gold,fg=white}
+\setbeamercolor{palette tertiary}{bg=Coe,fg=white}
+\setbeamercolor{block title}{bg=Coe}
+\setbeamertemplate{itemize item}{\color{Coe}$\blacktriangleright$}
+\setbeamertemplate{itemize subitem}{\color{Coe}$\blacktriangleright$}
+\setbeamertemplate{caption}[numbered]
+\setbeamerfont{footnote}{size=\tiny}
+
+
+\title[Impacts on Industries and Occupations]{Deeper Dive into the Impacts on Industries and Occupations}
+\author[Toby Lister]{Toby Lister}
+\date{June 15th, 2022}
+\centering
+
+
+\begin{document}
+\maketitle 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Updated Research Question
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Modified Research Question}
+	\begin{block}{}
+	Was the increase in unemployment insurance (UI) benefits effective at protecting workers in the restaurant, leisure, and hospitality industries?
+	\end{block}
+	
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Del Rio-Chanona
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Supply and Demand Shocks \footcite{del Rio-Chanona, et al. (2020)}}
+	\begin{itemize}
+	\item Provided quantitatve predictions of supply and demand shocks due to pandemic
+	\item Measured occupations ability to work from home by creating a Remote Labor Index (RLI)
+	\item Expected Results due to shocks:
+		\begin{itemize}
+		\item Would threaten around 20\% of US GDP
+		\item Would threaten 23\% of jobs
+		\item Reduce total wage income by 16\%
+		\end{itemize}
+	\item Emphasizes that these results are only first-order shocks and they expect them to be amplified by feedback effects
+	\end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% What Industries I will look into
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Shocks on Industries \footcite{del Rio-Chanona, et al. (2020)}}
+	\begin{itemize}
+	\item Sectors like transport will be constrained by demand shocks 
+	\vspace{3mm}
+	\item Sectors like manufacturing, mining, etc will be constrained by supply shocks
+	\end{itemize}
+
+\end{frame}
+
+
+\begin{frame}{Shocks on Industries cont. \footcite{del Rio-Chanona, et al. (2020)}} 
+% Talk about paper breifly then insert a picture of the graph on pg 16 to talk about industry impacts
+	\begin{figure}
+	 \includegraphics[scale= .95]{SandDInd.jpeg}
+	 \label{fig:SandDInd}
+	 \caption{Supply and Demand Shocks by Industry}
+ 	
+	\end{figure}
+\end{frame}
+
+
+\begin{frame}{Shocks on Occupations \footcite{del Rio-Chanona, et al. (2020)}} 
+	\begin{itemize}
+	\item High-wage occupations seem relativly immune from adverse supply and demand shocks
+	\vspace{3mm}
+	\item Low-wage occupations seem to be much more vulnerable to adverse shocks
+	\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Shocks on Occupations cont. \footcite{del Rio-Chanona, et al. (2020)}}
+
+% Talk about paper breifly then insert a picture of the graph on pg 16 to talk about industry impacts
+	\begin{figure}
+	 \includegraphics[scale= .85]{SandDOcc.jpeg}
+	 \label{fig:SandDOcc}
+	 \caption{Supply and Demand Shocks by Occupation}
+	 
+	\end{figure}
+\end{frame}
+
+%\begin{frame}{Industries and Occupations of Interest}
+%	\begin{itemize}
+%	\item Hospitality
+%		\begin{itemize}
+%		\item Hotel Desk Clerks
+%		\item Lodging Managers
+%		\end{itemize}
+%\vspace{3mm}
+%	\item Restaurants
+%		\begin{itemize}
+%		\item Restaurant Cooks
+%		\item Wait Staff
+%		\item Fast Food Employees
+%		\end{itemize}
+%	\end{itemize}
+%\end{frame}
+
+\begin{frame}{Looking At Leisure and Hospitality \footcite{Gould and Kassa (2021)}}
+
+	\begin{itemize}
+	\item Lesuire and Hospitality lost 8.2 million jobs between March and April 2020 
+	\vspace{2mm}
+	\item Job shortfalls still remain in Leisure and Hospitality as of Feb 2021
+	\vspace{2mm}
+	\item Low-wage workers were hit the hardest in Leisure and Hospitality industries
+	\end{itemize}
+
+\end{frame}
+
+
+\begin{frame}{Employment Changes Among Industries \footcite{Gould and Kassa (2021)}}
+
+	\begin{figure}
+	\includegraphics[scale=.77]{EmpChg.png}
+	\label{fig:EmpChg}
+	\caption{Change in Employment Among Industries Beween February 2020 and February 2021 \footcite{Bureau of Labor Statistics (BLS) Current Employment Statistics, Establishment Survey (CES) public data series.}}
+	\end{figure}
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Comparing states
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Federal UI Benefit Expiration Dates}
+	\begin{figure}
+	\includegraphics[scale= .65]{UI_exp_state.png}
+	\caption{Month of Federal UI Benefit Expiration by State in 2021}
+	\label{fig:UIexp}
+	\end{figure}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Variables of Interest
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Variables of Interest- Individual Level}
+	\begin{multicols}{2}
+		\begin{itemize}
+			\item Age
+			\item Sex
+			\item Race
+			\item Population Status
+		\end{itemize}
+	\columnbreak
+		\begin{itemize}
+			\item Employment Status
+			\item Reason for Unemployment
+			\item Industry
+			\item Welfare Income
+			\item Source of Unemployment Income
+		\end{itemize}
+	\end{multicols}
+\end{frame}
+
+\begin{frame}{Variables of Interest- National Level}
+
+	\begin{itemize}
+		\item Personal Savings Rate
+		\vspace{3mm}
+		\item Personal Consumption Expenditure
+	\end{itemize}
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Plan for the next week
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Plan for Next Week}
+
+	\begin{itemize}
+	\item Continue reading papers from list
+	\vspace{2mm}
+	\item Begin exploring data collected from IPUMS
+	\vspace{2mm}
+	\item Fully refine research question
+	\end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% References
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{References}
+	\begin{itemize}
+	\item Gould, Elise and Melat Kassa. ``Low-wage, low hours workers were hit hardest in the COVID-19 recession''. \textbf{Economic Policy Institute}. 2021.\\
+	
+	\item Rio-Chanona, Mealy, Pichler, Lafond, and Farmer, ``Supply and Demand Shocks in the COVID-19 Pandemic: an Industry and Occupation Perspective”, \textbf{Oxford Review of Economic Policy}, (2020).\\
+	
+	\item Sarah Flood, Miriam King, Renae Rodgers, Steven Ruggles, J. Robert Warren and Michael Westberry. Integrated Public Use Microdata Series, Current Population Survey: Version 9.0 [dataset]. Minneapolis, MN: IPUMS, 2021.
+
+
+	
+
+
+
+	\end{itemize}
+\end{frame}
+
+\end{document}
